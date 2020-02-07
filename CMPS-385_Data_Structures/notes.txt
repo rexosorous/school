@@ -1,0 +1,129 @@
+arrays
+
+
+
+
+c++ compiler will initialize an array with zeros when values are not specified
+he's talking about how to traverse arrays and how to display them, but this is very basic
+
+    void displayArray(int x[], int len)
+    {
+        for(int i = 0; i < len; ++i)
+        {
+            std::cout << x[i] << '\t';
+        }
+    }
+
+now he's talking about pass-by-value and pass-by-reference
+
+
+using <algorithm> to sort arrays
+    sort(arrayName, arrayName + arrayLength);
+
+
+now he's talking about function overloading
+function templates
+    - used to condense a bunch of overloaded functions with the same number of arguments and logic
+        * ex: if you have 4 different displayArray functions each for different variables
+              whose headers look like:
+              void displayArray(int x[], int len)
+              void displayArray(float x[], int len)
+              void displayArray(char x[], int len)
+              void displayArray(string x[], int len)
+    - template <class T>
+      void display(T x[], int len)
+        * data type T is an abstract variable we defined
+
+
+
+how to trace functions
+
+given:
+    void f(int& a, int b)
+    {
+        a++;
+        b+=2;
+    }
+
+    void g(int a, int& b)
+    {
+        a*=2;
+        b--;
+    }
+
+    int main()
+    {
+        int x = 5, y = 7;
+        f(x, y);
+        g(x, y):
+        std::cout << x << '\t' << y;
+    }
+
+
+
+
+
+functions in <cmath>
+
+sqrt(x)
+pow(x, y)       x^y
+fabs(x)         |x|
+exp(x)          e^x
+log(x)          ln(x)
+log10(x)        log(x)
+floor(x)        round down x
+ceil(x)         round up x
+
+
+
+functions of <iostream>
+
+isspace(c)
+isdigit(c)
+isupper(c)
+islower(c)
+isalpha(c)
+isalnum(c)
+x = toupper(c)
+x = tolower(c)
+rand()              returns an int between 0 and MAX_INT
+
+
+
+functions of <iomanip>
+
+setw(int)
+setprecision(int)
+setfill(char)
+left
+right
+
+
+
+given:
+    string name1 = "John", name2 = "Alexander";
+    float income1 = 25.30, income2 = 1234.56;
+
+and we want a format that looks like:
+    John...........................25.30
+    Alexander....................1234.56
+
+we do:
+    cout << setfill('.');
+    cout << fixed << showpoint << setprecision(2);
+    cout << left << setw(10) << name1 << right << setw(8) << income1 << endl;
+    cout << left << setw(10) << name2 << right << setw(8) << income2 << endl;
+
+
+
+
+
+
+
+
+
+learning read/write to file using <fstream>
+fstream x;
+x.open(filename, ios::param) where param is in/out/app
+
+while(!eof) or if(x.fail())

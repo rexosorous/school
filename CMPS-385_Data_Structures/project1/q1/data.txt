@@ -1,0 +1,6 @@
+David 21 2.1
+Noel 20 2.0
+George 22 3.1
+Sean 16 3.2
+Jorge 19 1.9
+Kassandra 24 2.4

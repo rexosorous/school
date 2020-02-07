@@ -1,0 +1,149 @@
+networks are meant to share INFORMATION and RESOURCES
+
+
+
+Types of networks:
+	1. LAN (Local Area Network)
+		- limited to specific area (like an office or a building)
+		- logical workgroups
+		- are permanent connections
+		- are PRIVATE network connections
+		- older LANs use half duplex while newer LANs use full duplex
+			- half duplex is one directional communication
+				- like walkie talkies where when you press to talk, you can't hear the other person
+
+	2. WAN (Wide Area Network)
+		- crosses metropolitan, regional, or national boundaries
+			- might connect a block together, a whole city together, or just two building across the street from each other
+			- ceases to be a private network (LAN) and the physical wires are owned (or bought by) a third party
+			- ex: the internet
+		- uses routers and public network links
+		- covers greater distances than a LAN
+		- usually slower than LANs
+		- WAN connections may be temporary
+			- ex: may only be on between 8 and 10 am
+		- can be full or half duplex
+		- centralized or distributed (internet)
+
+
+
+P2P (Peer to Peer)
+	- no centralized control over network
+	- all computers are equal
+	- access rights controlled by the computer with the data or resource
+		- comp A controls the access rights to its data while comp B might have its own access rights to its own data
+	- limits the number of computers (usually around 10)
+		- whenever a computer "talks" to another on a network, it really sends that message to all computers on that network
+		  because there doesn't exist a machine to organize everything
+
+
+
+client/server
+	- manages an entire newtork from one point
+	- clients make request to servers and the server responds to that request
+	- opposite of P2P
+	- is more organized than P2P
+	- has better security than P2P
+
+
+
+
+
+Primary Network Components
+	- workstation
+		- a computer used by an individual to do work
+			- work like word processing, drafting, graphics
+		- an operating system on a workstation is an interpreter to send messages to a service
+	- client
+		- anything that requests resources from a network
+		- a workstation can be a client
+		- a printer is a client, but not a workstation
+	- host
+		- used mostly when talking about network protocol TCP/IP software related functions
+		- a host is any network with TCP/IP
+	- server
+		- provides resources to the clients on the network
+		- dedicated computers that provide a service to the network
+		- a SERVER provides a SERVICE
+		- almost always have a backup hardware (two PSUs, two MOBOs, etc) and software
+		- has A LOT of physical resources (storage, memory, etc)
+		- has to remain cool
+
+
+
+
+
+Network Attached Storage (NAS)
+	- replaces file servers
+	- easy to setup
+	- uses a proprietary OS
+	- can use proprietary disk file system which can make it more secure
+	- can serve as a DHCP server
+
+
+
+Network Topology
+	- tells us the way that cables and other pieces of hardware connect to one another
+
+	1. physical topology
+		- refers to how cables and devices are physically connected in the real world
+	2. logical topology
+		- an abstract schematic of how devices are connected
+
+
+Types of Topologies
+	1. BUS topology
+		- connects each computer in a daisy chain
+		- passive (no powered devices are needed to connect computers)
+		- half duplex environment (one host talks at a time)
+		- uses a terminator cable
+		- uses a ethernet topology 10Base2 (10 megabits / base band technology / 185 meters max)
+		* advantages
+			- is super simple and uses the least amount of cable and money
+			- a repeater can extend distance
+		* disadvantages
+			- heavey use slows down the network (bandwidth)
+			- each connection lowers the signal
+			- host moves or changes are hard (when one computer is disconnected, the network goes down)
+			- low fault tolerance (if one cable dies, the whole network dies)
+	2. ring topology
+		- a BUS that connects in a circle (the end is connected to the start)
+	3. star topology
+		- the VAST majority of computer networks are star topologies
+		- each host is conneected separately to a hub
+		- has a central connection (hub) for all computers
+		- high fault tolerance (if one computer breaks, then nothing else is affected)
+		* advantages
+			- hosts can be added easily
+			- high fault tolerance
+			- if one cable failes, one host fails
+		* disadvantages
+			- higher costs (needs more cables and needs hubs)
+			- hub failure (if the hub dies, the whole network dies)
+	4. star-ring topology
+		- when the hub in a star topology uses an internal ring topology
+		- so the hub itself is a ring, but the whole network connects to the hub in a star
+	5. star-bus topology
+		- same thinking with star-ring but with bus
+
+
+
+Mesh & Point-to-Multipoint
+	- connection from one computer to EVERY other computer on the network
+		- one computer must have a connection to each individual computer on the network
+	- extremely populare with wireless connections rather than physical connections
+	* advantage
+		- redundancies (even with multiple wire failures, we can still talk to each computer)
+
+
+
+Point-to-Point
+	- two computers connect directly
+	- no need for a central hub
+	- can be wired or wireless
+
+
+Wireless
+	- two modes of operaton
+		- ad hoc (point-to-point)
+		- multipoint
