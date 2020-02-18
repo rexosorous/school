@@ -3,7 +3,7 @@
     Course:     CMPS-385
     Semester:   Spring 2020
     Project:    No. 1 Part 2
-    Purpose:    To learn and impplement function templates
+    Purpose:    To learn and implement function templates
    ----------------------------------------------- */
 
 #include <iostream>
@@ -14,8 +14,8 @@
 
 
 // function prototypes
-template <typename T1> void displayArray(T1 arr, int length);
-template <typename T2> void sortArray(T2 arr, int length);
+template <class T1> void displayArray(T1 arr, int length);
+template <class T2> void sortArray(T2 arr, int length);
 
 
 
@@ -61,7 +61,7 @@ int main()
 
 
 
-template <typename T1>
+template <class T1>
 void displayArray(T1 arr, int length)
 {
     /*  name:       display array
@@ -78,7 +78,7 @@ void displayArray(T1 arr, int length)
 
 
 
-template <typename T2>
+template <class T2>
 void sortArray(T2 arr, int length)
 {
     /*  name:       arraySort
